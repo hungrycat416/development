@@ -4,105 +4,105 @@
       "description": "Mickey Mouse and Friends Holiday Sweater for Adults",
       "price": 55.99,
       "type": "sweater",
-      "image": "images/connie.png"
+      "image": "images/sweater1.png"
     },
     {
       "name": "PacSun",
-      "description": "Mickey Mouse and Pluto Relaxed Fit Denim Pants for Men by Our Universe",
+      "description": "Mickey Mouse and Pluto Relaxed Fit Denim Pants for Men",
       "price": 4.99,
       "type": "pants",
-      "image": "image"
+      "image": "images/pants1.png"
     },
     {
       "name": "Kohl's",
       "description": "Disney Mickey Mouse Classic Pose T-Shirt",
       "price": 2.99,
       "type": "shirt",
-      "image": "images/connie.png"
+      "image": "images/shirt1.jpeg"
     },
     {
       "name": "Etsy",
       "description": "FIFTH SUN Mickey & Friend Vintage Sweatshirt",
       "price": 5.99,
       "type": "sweater",
-      "image": "images/dylan.png"
+      "image": "images/sweater2.png"
     },
     {
       "name": "Macy's",
       "description": " Mickey and Minnie Mouse Drawstring Denim Pants for Women by Our Universe",
       "price": 3.99,
       "type": "pants",
-      "image": "images/isaac.png"
+      "image": "images/pants2.png"
     },
     {
       "name": "Disney",
       "description": "Disney Men's Mickey Mouse Vintage Scene Me Graphic T-Shirt",
       "price": 4.99,
       "type": "shirt",
-      "image": "images/jeff.png"
+      "image": "images/shirt2.jpg"
     },
     {
       "name": "Macy's",
       "description": "Mickey Mouse Pullover Knit Sweater for Adults",
       "price": 4.99,
       "type": "sweater",
-      "image": "images/jenny.png"
+      "image": "images/sweater3.png"
     },
     {
       "name": "Disney",
       "description": "Mickey Mouse Genuine Mousewear Sweatpants for Adults – Black",
       "price": 2.99,
       "type": "pants",
-      "image": "images/jessie.png"
+      "image": "images/pants3.png"
     },
     {
       "name": "Etsy",
       "description": "Disney Mickey Mouse and Friends T-Shirt",
       "price": 1.99,
       "type": "shirt",
-      "image": "images/kelly.png"
+      "image": "images/shirt3.jpeg"
     },
     {
       "name": "Macy's",
       "description": "Mickey Mouse Holiday Pullover Sweatshirt for Kids",
       "price": 3.99,
       "type": "sweater",
-      "image": "images/lauren.png"
+      "image": "images/sweater4.png"
     },
     {
       "name": "Disney",
       "description": "Mickey Mouse Genuine Mousewear Sweatpants for Adults – Blue",
       "price": 2.99,
       "type": "pants",
-      "image": "images/melissa.png"
+      "image": "images/pants4.png"
     },
     {
       "name": "Etsy",
       "description": "Disney Mickey And Friends Minnie Mouse Classic Portrait T-Shirt",
       "price": 2.99,
       "type": "shirt",
-      "image": "images/miku.png"
+      "image": "images/shirt4.jpeg"
     },
     {
       "name": "Kohl's",
       "description": "A Mickey Mouse Holiday Spirit Jersey Sweater for Kids",
       "price": 2.99,
       "type": "sweater",
-      "image": "images/nick.png"
+      "image": "images/sweater5.png"
     },
     {
       "name": "PacSun",
       "description": "Disnet Mickey Mouse Embroidered twill jogger",
       "price": 3.99,
       "type": "pants",
-      "image": "images/sunny.png"
+      "image": "images/pants5.jpeg"
     },
     {
       "name": "Kohl's",
       "description": "Disney Mickey Mouse Womans Jersey Shirt Button Front",
       "price": 2.99,
       "type": "shirt",
-      "image": "images/tongyu.png"
+      "image": "images/shirt5.jpg"
     }
   ]
   

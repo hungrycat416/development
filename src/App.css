@@ -16,7 +16,7 @@ h1 {
 }
 
 .items{
-    width: 18%;
+    width: 15%;
     padding: 20px;
     margin: 2%;
     border: 1px solid #d9d9d9;
@@ -24,7 +24,7 @@ h1 {
 }
 
 .cart{
-    padding: 20px;
+    padding: 10px;
     width: 50%;
     margin: auto;
     margin-bottom: 50px;
@@ -32,7 +32,9 @@ h1 {
     border: 0px solid #d9d9d9;
     border-radius: 20px;
     background-color: lavender;
+    height: 100%;
     text-align: center;
+    margin-right: 2vw;
 }
 
 h1{
@@ -43,11 +45,30 @@ h1{
     margin-bottom: 20px;
     border: 0px solid #d9d9d9;
     border-radius: 20px;
-    background-color: lavender;
+    /* background-color: lavender; */
     text-align: center;
 }
 
 .wrapper {
     display: flex;
     flex-wrap: wrap;
+}
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-items: space-between;
+  align-items: space-between;
+}
+.filter{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d9d9d9;
+  height: 100%;
+  margin-left: 2vw;
+  margin: 2%;
+  width:100%;
+}
+.filter-item{
+  margin-left: 1vw;
+  margin-bottom: 1vw;
 }

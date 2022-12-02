@@ -32,7 +32,28 @@ function App() {
   return (
     <div className="App">
       <h1>Mickey's Store</h1> {/* TODO: personalize your bakery (if you want) */}
-
+      <div class = "flex-container">
+      <div class ="filter">
+        <div class = "filter-item">
+          <h3>Clothes</h3>
+        <button type="item">Sweaters</button>
+        <button type="item">Pants</button>
+        <button type="item">Shirts</button>
+        </div>
+        <div class = "filter-item">
+          <h3>Price</h3>
+        <button type="item">Click Me!</button>
+        <button type="item">Click Me!</button>
+        <button type="item">Click Me!</button>
+        </div>
+        <div class = "filter-item">
+          <h3>Brands</h3>
+        <button type="Disney">Disney</button>
+        <button type="PacSun">PacSun</button>
+        <button type="Etsy">Etsy</button>
+        <button type="Kloh's">Kloh's</button>
+        </div>
+      </div>
       <div class="wrapper">
       {mickeyData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
         // <p>Bakery Item {index}</p> // replace with BakeryItem component
@@ -47,6 +68,9 @@ function App() {
             <h4>Total: ${total}</h4>
       </div>
     </div>
+
+      </div>
+      
   );
 }
 
