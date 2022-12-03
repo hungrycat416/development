@@ -19,7 +19,7 @@ function App() {
         "name": "Holiday Sweater",
         "brandname": "Disney",
         "description": "Mickey Mouse and Friends Holiday Sweater for Adults",
-        "price": 55.99,
+        "price": 20.99,
         "type": "sweater",
         "image": "images/sweater1.png"
       },
@@ -27,7 +27,7 @@ function App() {
         "name": "Denim Pants",
         "brandname": "PacSun",
         "description": "Mickey Mouse and Pluto Relaxed Fit Denim Pants for Men",
-        "price": 4.99,
+        "price": 60.99,
         "type": "pants",
         "image": "images/pants1.png"
       },
@@ -43,7 +43,7 @@ function App() {
         "name": "Vintage Sweatshirt",
         "brandname": "Etsy",
         "description": "FIFTH SUN Mickey & Friend Vintage Sweatshirt",
-        "price": 5.99,
+        "price": 55.99,
         "type": "sweater",
         "image": "images/sweater2.png"
       },
@@ -59,7 +59,7 @@ function App() {
         "name": "Graphic T-Shirt",
         "brandname": "Disney",
         "description": "Disney Men's Mickey Mouse Vintage Scene Me Graphic T-Shirt",
-        "price": 4.99,
+        "price": 33.99,
         "type": "shirt",
         "image": "images/shirt2.jpg"
       },
@@ -67,7 +67,7 @@ function App() {
         "name": "knit sweater",
         "brandname": "Macy's",
         "description": "Mickey Mouse Pullover Knit Sweater for Adults",
-        "price": 4.99,
+        "price": 50.99,
         "type": "sweater",
         "image": "images/sweater3.png"
       },
@@ -75,7 +75,7 @@ function App() {
         "name": "sweatpants",
         "brandname": "Disney",
         "description": "Mickey Mouse Genuine Mousewear Sweatpants for Adults – Black",
-        "price": 2.99,
+        "price": 65.99,
         "type": "pants",
         "image": "images/pants3.png"
       },
@@ -83,7 +83,7 @@ function App() {
         "name": "T-shirt",
         "brandname": "Etsy",
         "description": "Disney Mickey Mouse and Friends T-Shirt",
-        "price": 1.99,
+        "price": 30.99,
         "type": "shirt",
         "image": "images/shirt3.jpeg"
       },
@@ -91,7 +91,7 @@ function App() {
         "name": "pullover sweatshirt",
         "brandname": "Macy's",
         "description": "Mickey Mouse Holiday Pullover Sweatshirt for Kids",
-        "price": 3.99,
+        "price": 70.99,
         "type": "sweater",
         "image": "images/sweater4.png"
       },
@@ -99,7 +99,7 @@ function App() {
         "name": "sweatpants",
         "brandname": "Disney",
         "description": "Mickey Mouse Genuine Mousewear Sweatpants for Adults – Blue",
-        "price": 2.99,
+        "price": 45.99,
         "type": "pants",
         "image": "images/pants4.png"
       },
@@ -107,7 +107,7 @@ function App() {
         "name": "Minnie portrait T-shirt",
         "brandname": "Etsy",
         "description": "Disney Mickey And Friends Minnie Mouse Classic Portrait T-Shirt",
-        "price": 2.99,
+        "price": 35.99,
         "type": "shirt",
         "image": "images/shirt4.jpeg"
       },
@@ -115,25 +115,25 @@ function App() {
         "name": "jerysey sweater",
         "brandname": "Kohl's",
         "description": "A Mickey Mouse Holiday Spirit Jersey Sweater for Kids",
-        "price": 2.99,
+        "price": 23.99,
         "type": "sweater",
         "image": "images/sweater5.png"
       },
       {
-        "name": "Graphic T-Shirt",
+        "name": "twill jogger pants",
         "brandname": "PacSun",
         "description": "Disnet Mickey Mouse Embroidered twill jogger",
-        "price": 3.99,
+        "price": 40.99,
         "type": "pants",
         "image": "images/pants5.jpeg"
       },
       {
-        "name": "jersey shirt",
+        "name": "Minnie and Daisy",
         "brandname": "Kohl's",
-        "description": "Disney Mickey Mouse Womans Jersey Shirt Button Front",
-        "price": 2.99,
+        "description": "Disney Minnie Mouse and Daisy Duck Best Friends T-Shirt",
+        "price": 25.99,
         "type": "shirt",
-        "image": "images/shirt5.jpg"
+        "image": "images/shirt5.jpeg"
       }
     ]
   var filtered_mickey_data = mickeyData
@@ -143,7 +143,7 @@ function App() {
   const [total, setTotal] = useState(0);
   const [type, setType] = useState("All");
   const [brands, setBrands] = useState("All");
-  const [prices, setPrices] = useState("All");
+  const [price, setPrices] = useState("All");
 
   const updatePrice = () => {
     let sum = 0;
@@ -164,7 +164,10 @@ function App() {
   const selectFilterBrands = eventKey => {
     setBrands(eventKey);
   }
-  // filtering condition to return true if item should be on page, false if not
+  const selectSortType = eventKey => {
+    setPrices(eventKey);
+  }
+  // filtering by type
   const matchesFilterType = item => {
     if (type === "All") {
       return true
@@ -176,16 +179,28 @@ function App() {
       return false
     }
   }
+  //filtering by brands
   const matchesFilterBrand = item => {
     if (brands === "All") {
       return true
     }
-    else if (brands === item.name) {
+    else if (brands === item.brandname) {
       return true
     }
     else {
       return false
     }
+  }
+  //sorting by price (from low to high and high to low)
+
+  if (price === "lowtohigh") { // Price: Low to High selected (sort from $ to $$$)
+    filtered_mickey_data = filtered_mickey_data.sort((a, b) => {
+      return a.price - b.price;
+    })
+  } else if (price === "hightolow") { // Price: High to Low selected (sort from $$$ to $)
+    filtered_mickey_data = filtered_mickey_data.sort((a, b) => {
+      return b.price - a.price;
+    })
   }
 
   filtered_mickey_data = filtered_mickey_data.filter(matchesFilterType);
@@ -216,6 +231,12 @@ function App() {
                 <NavDropdown.Item eventKey="PacSun">PacSun</NavDropdown.Item>
                 <NavDropdown.Item eventKey="Macy's">Macy's</NavDropdown.Item>
                 <NavDropdown.Item eventKey="Kohl's">Kohl's</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Nav className="me-auto" onSelect={selectSortType}>
+              <NavDropdown title="Sort By" id="basic-nav-dropdown">
+                <NavDropdown.Item eventKey="lowtohigh">Price: Low to High</NavDropdown.Item>
+                <NavDropdown.Item eventKey="hightolow">Price: High to Low</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
