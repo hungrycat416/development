@@ -16,7 +16,7 @@ function MickeyItem(prop) {
     return (
         <div class ="items">
             <img src={item.image}></img>
-            <h3>{item.name}</h3>
+            <h3>{item.brandname}</h3>
             <p>{item.description}</p>
             <p>{item.price}</p><button onClick={handleClick}>Add to Cart</button>
         </div>
